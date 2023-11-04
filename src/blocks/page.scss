@@ -3,9 +3,13 @@
 
 .page {
   @include reset;
+  background-image: url('https://mk-static-production.lesta.ru/metashop/508a1264/assets/images/main_bg.jpg');
+  height: 100%;
 
   &__container {
     height: 100%;
     display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

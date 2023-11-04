@@ -17,11 +17,12 @@ function Card({ vehicle }: CardType) {
     <article className='card' style={cardStyle}>
       <h2 className='card__title'>
         <img
-          className='card__pic'
+          className='card__pic-class'
           src={vehicle.type.icons.default}
           alt='Картинка. Иконка тип корабля'
-        ></img>{' '}
-        {vehicle.title} <span className='card__span'>{vehicle.type.title}</span>
+        ></img>
+        {vehicle.title}
+        <span className='card__span'>{vehicle.type.title}</span>
       </h2>
       <p className='card__description'>{vehicle.description}</p>
       <div className='card__container' style={backgroundStyle}>
