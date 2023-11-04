@@ -1,0 +1,28 @@
+$mainColor: #02142c;
+$secondColor: #333;
+$colorTextOrange: #fc611d;
+$colorTextWhite: #eee;
+$textShadowOrange: 0 0 0.25em rgb(0 0 0 / 70%);
+$textShadowWhite: 0 0 0.25em rgb(0 0 0 / 70%);
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  xs: 358px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1500px,
+);
+
+$z-index-bg: 2;
+$z-index-media: 5;
+$z-index-content: 10;
+$z-index-hight-content: 50;
+$z-index-popup: 100;

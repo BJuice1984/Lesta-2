@@ -1,0 +1,12 @@
+@import '../scss/utils/mixins';
+@import "../scss/utils/variables";
+
+.page {
+  @include reset;
+  height: 100vh;
+
+  &__container {
+    height: 100%;
+    display: grid;
+  }
+}

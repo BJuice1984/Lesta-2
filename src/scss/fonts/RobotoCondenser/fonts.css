@@ -1,0 +1,37 @@
+@font-face {
+  font-family: RobotoCondensed;
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./Roboto-Condensed-Regular.woff2") format("woff2"),
+    url("./Roboto-Condensed-Regular.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: RobotoCondensed;
+  font-style:  bold;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./Roboto-Condensed-Bold.woff2") format("woff2"),
+    url("./Roboto-Condensed-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  font-style:  light;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./Roboto-Condensed-Light.woff2") format("woff2"),
+    url("./Roboto-Condensed-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: TTT;
+  font-style:  light;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./TicTacToe.woff") format("woff"),
+    url("./TicTacToe.woff2") format("woff2");
+}
+
