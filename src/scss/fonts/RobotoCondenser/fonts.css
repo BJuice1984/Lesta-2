@@ -25,13 +25,3 @@
   src: url("./Roboto-Condensed-Light.woff2") format("woff2"),
     url("./Roboto-Condensed-Light.woff") format("woff");
 }
-
-@font-face {
-  font-family: TTT;
-  font-style:  light;
-  font-weight: 300;
-  font-display: swap;
-  src: url("./TicTacToe.woff") format("woff"),
-    url("./TicTacToe.woff2") format("woff2");
-}
-
