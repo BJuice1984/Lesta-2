@@ -1,0 +1,90 @@
+@import '../scss/utils/mixins';
+@import "../scss/utils/variables";
+
+.window {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  z-index: 20;
+  background-color: $mainColor;
+  margin: auto;
+  min-width: fit-content;
+  min-height: fit-content;
+  max-width: 720px;
+  max-height: 718px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.1s linear;
+}
+
+@media screen and (max-width: 768px) {
+  .window {
+    top: 10%;
+    max-width: 610px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .window {
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: none;
+  }
+}
+
+.windowOpened {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.1s, opacity 0.1s linear;
+}
+
+.closeButton {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 40px;
+  top: 28px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  height: 25px;
+  width: 25px;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 490px) {
+  .closeButton {
+    top: auto;
+    bottom: 18px;
+  }
+}
+
+.closeButton:hover {
+  opacity: 0.6;
+  transition: 0.2s ease-in-out;
+}
+
+.closeButton:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  border: 1px solid #F2F2F3;
+  background-color: #F2F2F3;
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.closeButton:after {
+  position: absolute;
+  content: '';
+  height: 18px;
+  border: 1px solid #F2F2F3;
+  background-color: #F2F2F3;
+  top: 0;
+  transform: rotate(-45deg);
+}

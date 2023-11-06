@@ -1,0 +1,50 @@
+@import '../scss/utils/mixins';
+@import "../scss/utils/variables";
+
+.modalDescription {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    @include reset;
+    @include text;
+    @include text-format(24px, 700, normal);
+    color: $colorTextWhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    text-wrap: nowrap;
+    padding-left: 10px;
+    padding-top: 30px;
+  }
+
+  &__subtitle {
+    @include reset;
+    @include text;
+    @include text-format(16px, 400, normal);
+    color: $colorTextWhite;
+    padding-left: 10px;
+  }
+
+  &__description {
+    @include reset;
+    @include text;
+    @include text-format(16px, 400, normal);
+    color: $colorTextWhite;
+    padding: 0 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+    border-top: 1px solid hsla(0,0%,100%,.1)
+  }
+
+  &__pic {
+    height: 500px;
+    object-fit: contain;
+  }
+
+  &__pic-flag {
+    height: 20px;
+    padding-right: 5px;
+  }
+}

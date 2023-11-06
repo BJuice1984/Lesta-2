@@ -1,40 +1,57 @@
-import { Vehicle } from '../../types'
-
-type CardType = {
-  vehicle: Vehicle
-}
+import { useEffect, useState } from 'react'
+import { CardType, Vehicle } from '../../types'
+import { motion, AnimatePresence, useAnimation } from 'framer-motion'
+import Modal from '../Modal/Modal'
+import ModalDescription from '../ModalDescription/ModalDescription'
 
 function Card({ vehicle }: CardType) {
-  const cardStyle = {
-    backgroundColor: vehicle.nation.color,
-  }
+  const [isDescriptionModalOpen, setIsDescriptionModalOpen] = useState(false)
+  const controls = useAnimation()
 
   const backgroundStyle = {
     backgroundImage: `url(${vehicle.nation.icons.large})`,
   }
 
+  const openModal = () => {
+    setIsDescriptionModalOpen(true)
+    controls.start('open')
+  }
+
+  const closeModal = () => {
+    setIsDescriptionModalOpen(false)
+    controls.start('closed')
+  }
+
   return (
-    <article className='card' style={cardStyle}>
-      <h2 className='card__title'>
+    <article className='card'>
+      <h2 className='card__title' onClick={openModal}>
+        <img
+          className={'card__pic-flag'}
+          src={vehicle.nation.icons.small}
+          alt='Картинка. Флаг'
+        ></img>
         <img
           className='card__pic-class'
           src={vehicle.type.icons.default}
           alt='Картинка. Иконка тип корабля'
         ></img>
         {vehicle.title}
-        <span className='card__span'>{vehicle.type.title}</span>
       </h2>
-      <p className='card__description'>{vehicle.description}</p>
       <div className='card__container' style={backgroundStyle}>
-        <div className='card__vignette'></div>
         <img
           className={'card__pic'}
           src={vehicle.icons.large}
           alt='Картинка. Корабль'
         ></img>
       </div>
-      <p className='card__description'>level: {vehicle.level}</p>
-      <p className='card__description'>nation: {vehicle.nation.title}</p>
+      <AnimatePresence>
+        {isDescriptionModalOpen && (
+          <Modal
+            component={<ModalDescription vehicle={vehicle} />}
+            handleClose={closeModal}
+          />
+        )}
+      </AnimatePresence>
     </article>
   )
 }

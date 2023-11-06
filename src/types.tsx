@@ -30,3 +30,7 @@ export interface VehiclesData {
     vehicles: Vehicle[]
   }
 }
+
+export type CardType = {
+  vehicle: Vehicle
+}

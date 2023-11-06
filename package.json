@@ -13,6 +13,7 @@
     "@types/react": "^18.2.34",
     "@types/react-dom": "^18.2.14",
     "apollo-boost": "^0.4.9",
+    "framer-motion": "^10.16.4",
     "graphql": "^15.8.0",
     "graphql-tag": "^2.12.6",
     "normalize": "^0.3.1",
