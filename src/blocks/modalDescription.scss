@@ -41,6 +41,22 @@
   &__pic {
     height: 500px;
     object-fit: contain;
+
+    @include media(xl) {
+      height: 350px
+    }
+  
+    @include media(lg) {
+      height: 280px
+    }
+  
+    @include media(md) {
+      height: 250px
+    }
+  
+    @include media(sm) {
+      height: 170px
+    }
   }
 
   &__pic-flag {

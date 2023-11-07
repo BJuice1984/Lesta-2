@@ -3,6 +3,7 @@ $secondColor: #333;
 $colorTextOrange: #fc611d;
 $colorTextWhite: #eee;
 $colorTextGold: #eec568;
+$colorTextInput: rgba(219, 219, 219, 0.86);
 $textShadowOrange: 0 0 0.25em rgb(0 0 0 / 70%);
 $textShadowWhite: 0 0 0.25em rgb(0 0 0 / 70%);
 
@@ -19,7 +20,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1500px,
+  xl: 1200px,
 );
 
 $z-index-bg: 2;

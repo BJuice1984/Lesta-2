@@ -1,5 +1,6 @@
 import { CardType } from '../../types'
 import { motion } from 'framer-motion'
+import { convertLevel } from '../../utils/helpers'
 
 function ModalDescription({ vehicle }: CardType) {
   const popupVariants = {
@@ -10,8 +11,6 @@ function ModalDescription({ vehicle }: CardType) {
   const cardStyle = {
     backgroundColor: vehicle.nation.color,
   }
-
-  // vehicle.type.title
 
   return (
     <motion.div
@@ -30,9 +29,14 @@ function ModalDescription({ vehicle }: CardType) {
           ></img>
           {vehicle.title}
         </h2>
-        <span className='modalDescription__subtitle'>{vehicle.type.title}</span>
         <span className='modalDescription__subtitle'>
-          level: {vehicle.level}
+          type: {vehicle.type.title}
+        </span>
+        <span className='modalDescription__subtitle'>
+          level: {convertLevel(vehicle.level)}
+        </span>
+        <span className='modalDescription__subtitle'>
+          nation: {vehicle.nation.title}
         </span>
         <p className='modalDescription__description'>{vehicle.description}</p>
         <img
@@ -40,7 +44,6 @@ function ModalDescription({ vehicle }: CardType) {
           src={vehicle.icons.large}
           alt='Картинка. Корабль'
         ></img>
-        <p className='card__description'>nation: {vehicle.nation.title}</p>
       </section>
     </motion.div>
   )

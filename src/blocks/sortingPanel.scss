@@ -1,0 +1,35 @@
+@import '../scss/utils/mixins';
+@import "../scss/utils/variables";
+
+.sortingPanel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__container-inputs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+
+  &__container-title {
+    @include reset;
+    @include text;
+    @include text-format(16px, 300, normal);
+    color: $colorTextWhite;
+  }
+
+  &__input {
+    margin-right: 5px;
+  }
+
+  &__label {
+    color: $colorTextInput;
+  }
+}

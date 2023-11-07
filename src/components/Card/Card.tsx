@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
-import { CardType, Vehicle } from '../../types'
-import { motion, AnimatePresence, useAnimation } from 'framer-motion'
+import { useState } from 'react'
+import { CardType } from '../../types'
+import { AnimatePresence, useAnimation } from 'framer-motion'
 import Modal from '../Modal/Modal'
 import ModalDescription from '../ModalDescription/ModalDescription'
 
