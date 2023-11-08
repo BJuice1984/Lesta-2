@@ -20,7 +20,7 @@
 ![SASS](https://img.shields.io/badge/SASS%20-hotpink.svg?&style=for-the-badge&logo=SASS&logoColor=white)
 ![TS](https://img.shields.io/badge/typescript%20-%23007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white)
 
-## [Ссылка на проект](https://bjuice1984.github.io/)
+## [Ссылка на проект](https://bjuice1984.github.io/Lesta-SecondChance/)
 
 ## Автор
 
