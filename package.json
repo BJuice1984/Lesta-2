@@ -1,9 +1,11 @@
 {
   "name": "lesta-second-chance",
+  "homepage": "https://BJuice1984.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.8.7",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -14,6 +16,7 @@
     "@types/react-dom": "^18.2.14",
     "apollo-boost": "^0.4.9",
     "framer-motion": "^10.16.4",
+    "gh-pages": "^6.0.0",
     "graphql": "^15.8.0",
     "graphql-tag": "^2.12.6",
     "normalize": "^0.3.1",
@@ -27,7 +30,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
