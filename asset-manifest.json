@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.a2c7bc3a.css",
-    "main.js": "/static/js/main.803a9d64.js",
-    "static/js/787.7bf9c954.chunk.js": "/static/js/787.7bf9c954.chunk.js",
-    "static/media/Roboto-Condensed-Regular.woff": "/static/media/Roboto-Condensed-Regular.30cadc0cc6e96a8c83d5.woff",
-    "static/media/Roboto-Condensed-Bold.woff": "/static/media/Roboto-Condensed-Bold.c0b72ac864825c99d66e.woff",
-    "static/media/Roboto-Condensed-Light.woff": "/static/media/Roboto-Condensed-Light.7670396a8fa34f2d0c5e.woff",
-    "static/media/Roboto-Condensed-Regular.woff2": "/static/media/Roboto-Condensed-Regular.1d571529b6ebc16b330d.woff2",
-    "static/media/Roboto-Condensed-Bold.woff2": "/static/media/Roboto-Condensed-Bold.6d1e678fb29fbda0b128.woff2",
-    "static/media/Roboto-Condensed-Light.woff2": "/static/media/Roboto-Condensed-Light.f16dca9206fc0fb6d0d8.woff2",
-    "index.html": "/index.html",
-    "main.a2c7bc3a.css.map": "/static/css/main.a2c7bc3a.css.map",
-    "main.803a9d64.js.map": "/static/js/main.803a9d64.js.map",
-    "787.7bf9c954.chunk.js.map": "/static/js/787.7bf9c954.chunk.js.map"
+    "main.css": "/lesta-second-chance/static/css/main.8a544161.css",
+    "main.js": "/lesta-second-chance/static/js/main.018010d6.js",
+    "static/js/787.7bf9c954.chunk.js": "/lesta-second-chance/static/js/787.7bf9c954.chunk.js",
+    "static/media/Roboto-Condensed-Regular.woff": "/lesta-second-chance/static/media/Roboto-Condensed-Regular.30cadc0cc6e96a8c83d5.woff",
+    "static/media/Roboto-Condensed-Bold.woff": "/lesta-second-chance/static/media/Roboto-Condensed-Bold.c0b72ac864825c99d66e.woff",
+    "static/media/Roboto-Condensed-Light.woff": "/lesta-second-chance/static/media/Roboto-Condensed-Light.7670396a8fa34f2d0c5e.woff",
+    "static/media/Roboto-Condensed-Regular.woff2": "/lesta-second-chance/static/media/Roboto-Condensed-Regular.1d571529b6ebc16b330d.woff2",
+    "static/media/Roboto-Condensed-Bold.woff2": "/lesta-second-chance/static/media/Roboto-Condensed-Bold.6d1e678fb29fbda0b128.woff2",
+    "static/media/Roboto-Condensed-Light.woff2": "/lesta-second-chance/static/media/Roboto-Condensed-Light.f16dca9206fc0fb6d0d8.woff2",
+    "index.html": "/lesta-second-chance/index.html",
+    "main.8a544161.css.map": "/lesta-second-chance/static/css/main.8a544161.css.map",
+    "main.018010d6.js.map": "/lesta-second-chance/static/js/main.018010d6.js.map",
+    "787.7bf9c954.chunk.js.map": "/lesta-second-chance/static/js/787.7bf9c954.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2c7bc3a.css",
-    "static/js/main.803a9d64.js"
+    "static/css/main.8a544161.css",
+    "static/js/main.018010d6.js"
   ]
 }
