@@ -29,7 +29,6 @@ function SortingPanel({
 
   const nations = data.nations
   const types = data.vehicleTypes
-  console.log('🚀 ~ file: SortingPanel.tsx:33 ~ types:', types)
 
   const renderTypeInputs = () => {
     const typeInputs = []
@@ -95,40 +94,24 @@ function SortingPanel({
 
   return (
     <div className='sortingPanel'>
-      <div className='sortingPanel__container'>
+      <div className='sortingPanel__container sortingPanel__container_type_levels'>
         <p className='sortingPanel__container-title'>Уровни</p>
         <div className='sortingPanel__container-inputs'>
           {renderLevelInputs()}
         </div>
       </div>
-      <div className='sortingPanel__container'>
+      <div className='sortingPanel__container sortingPanel__container_type_nations'>
         <p className='sortingPanel__container-title'>Нации</p>
-        <div className='sortingPanel__container-inputs'>
+        <div className='sortingPanel__container-inputs sortingPanel__container-inputs_type_nations'>
           {renderNationInputs()}
         </div>
       </div>
-      <div className='sortingPanel__container'>
+      <div className='sortingPanel__container sortingPanel__container_type_types'>
         <p className='sortingPanel__container-title'>Типы</p>
         <div className='sortingPanel__container-inputs sortingPanel__container-inputs_type_types'>
           {renderTypeInputs()}
         </div>
       </div>
-      {/* <label>
-        <input
-          type='checkbox'
-          checked={sortByNation}
-          onChange={toggleSortByNation}
-        />
-        Сортировать по нации
-      </label> */}
-      {/* <label>
-        <input
-          type='checkbox'
-          checked={sortByType}
-          onChange={toggleSortByType}
-        />
-        Сортировать по типу
-      </label> */}
     </div>
   )
 }

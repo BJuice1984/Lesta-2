@@ -51,7 +51,6 @@ function App() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error: {error.message}</p>
 
-  console.log(data)
   const compareShips: compareShipsType[] = [
     (a: Vehicle, b: Vehicle) => {
       if (selectedLevels.length > 0) {
