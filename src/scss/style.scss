@@ -5,11 +5,27 @@
 
 // ::-webkit-scrollbar { width: 0;}
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2f2f37;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid #8585ad;
+  background: #8585ad;
+}
+
 body {
   margin: 0 auto;
   font-family: RobotoCondensed, "Helvetica Neue", Arial, sans-serif;
-  background-color: #fff;
+  background-image: url('https://mk-static-production.lesta.ru/metashop/508a1264/assets/images/main_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: black;
   position: relative;
-  max-width: 1600px;
+  max-width: 100%;
 }

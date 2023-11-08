@@ -3,13 +3,30 @@
 
 .page {
   @include reset;
-  background-image: url('https://mk-static-production.lesta.ru/metashop/508a1264/assets/images/main_bg.jpg');
-  height: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  margin: 0 auto;
+
 
   &__container {
+    margin: 0 auto;
     height: 100%;
-    display: grid;
+    min-width: fit-content;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 25px;
-    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__button {
+    @include button_type_fill-white;
+    @include text-format(16px, 700, normal);
+    width: 300px;
+    margin-bottom: 20px;
+
+    @include media(sm) {
+      width: 150px;
+    }
   }
 }
