@@ -69,14 +69,16 @@ function App() {
     },
     (a: Vehicle, b: Vehicle) => {
       if (selectedNation.length > 0) {
+        const aNation = a.nation.icons.small
+        const bNation = b.nation.icons.small
         if (
-          selectedNation.includes(a.nation.icons.small) &&
-          selectedNation.includes(b.nation.icons.small)
+          selectedNation.includes(aNation) &&
+          selectedNation.includes(bNation)
         ) {
-          return a.level - b.level
-        } else if (selectedNation.includes(a.nation.icons.small)) {
+          return aNation.localeCompare(bNation)
+        } else if (selectedNation.includes(aNation)) {
           return -1
-        } else if (selectedNation.includes(b.nation.icons.small)) {
+        } else if (selectedNation.includes(bNation)) {
           return 1
         }
       }
@@ -84,14 +86,13 @@ function App() {
     },
     (a: Vehicle, b: Vehicle) => {
       if (selectedType.length > 0) {
-        if (
-          selectedType.includes(a.type.icons.default) &&
-          selectedType.includes(b.type.icons.default)
-        ) {
-          return a.level - b.level
-        } else if (selectedType.includes(a.type.icons.default)) {
+        const aType = a.type.icons.default
+        const bType = b.type.icons.default
+        if (selectedType.includes(aType) && selectedType.includes(bType)) {
+          return aType.localeCompare(bType)
+        } else if (selectedType.includes(aType)) {
           return -1
-        } else if (selectedType.includes(b.type.icons.default)) {
+        } else if (selectedType.includes(bType)) {
           return 1
         }
       }
