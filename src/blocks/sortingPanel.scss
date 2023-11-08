@@ -1,0 +1,87 @@
+@import '../scss/utils/mixins';
+@import "../scss/utils/variables";
+
+.sortingPanel {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  // @include media(xl) {
+  //   height: 350px
+  // }
+
+  // @include media(lg) {
+  //   height: 280px
+  // }
+
+  @include media(md) {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-areas: 
+      "levels nations"
+      "types nations";
+  }
+
+  @include media(sm) {
+    column-gap: 5px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &_type_levels {
+      grid-area: levels;
+    }
+
+    &_type_nations {
+      grid-area: nations;
+    }
+
+    &_type_types {
+      grid-area: types;
+    }
+  }
+
+  &__container-inputs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+
+    @include media(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &_type_nations {
+      @include media(md) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &_type_types {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__container-title {
+    @include reset;
+    @include text;
+    @include text-format(16px, 300, normal);
+    color: $colorTextWhite;
+  }
+
+  &__input {
+    margin-right: 10px;
+    @include media(sm) {
+      margin-right: 5px;
+    }
+  }
+
+  &__label {
+    color: $colorTextInput;
+    display: flex;
+    align-items: center;
+  }
+}
