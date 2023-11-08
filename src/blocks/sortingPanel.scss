@@ -4,7 +4,7 @@
 .sortingPanel {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 50px;
 
   &__container {
     display: flex;
@@ -16,6 +16,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
+
+    &_type_types {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__container-title {
@@ -26,10 +30,13 @@
   }
 
   &__input {
-    margin-right: 5px;
+    margin-right: 10px;
+    color: aquamarine;
   }
 
   &__label {
     color: $colorTextInput;
+    display: flex;
+    align-items: center;
   }
 }

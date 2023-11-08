@@ -10,8 +10,8 @@ type compareShipsType = (a: Vehicle, b: Vehicle) => number
 
 function App() {
   const [selectedLevels, setSelectedLevels] = useState<number[]>([])
-  const [sortByNation, setSortByNation] = useState(false)
-  const [sortByType, setSortByType] = useState(false)
+  const [selectedNation, setSelectedNation] = useState<string[]>([])
+  const [selectedType, setSelectedType] = useState<string[]>([])
 
   const toggleLevelFilter = (level: number) => {
     if (selectedLevels.includes(level)) {
@@ -22,8 +22,27 @@ function App() {
       setSelectedLevels([...selectedLevels, level])
     }
   }
-  const toggleSortByNation = () => setSortByNation(!sortByNation)
-  const toggleSortByType = () => setSortByType(!sortByType)
+
+  const toggleNationFilter = (nation: string) => {
+    if (selectedNation.includes(nation)) {
+      setSelectedNation(
+        selectedNation.filter((selectedNation) => selectedNation !== nation)
+      )
+    } else {
+      setSelectedNation([...selectedNation, nation])
+    }
+  }
+
+  const toggleTypeFilter = (type: string) => {
+    if (selectedType.includes(type)) {
+      setSelectedType(
+        selectedType.filter((selectedType) => selectedType !== type)
+      )
+    } else {
+      setSelectedType([...selectedType, type])
+    }
+  }
+
   const { handleLoadMore, numberOfShips } = usePagination()
   const { loading, error, data } = useQuery(SHIPS_QUERY)
 
@@ -49,10 +68,36 @@ function App() {
       }
       return 0
     },
-    (a: Vehicle, b: Vehicle) =>
-      sortByNation ? a.nation.title.localeCompare(b.nation.title) : 0,
-    (a: Vehicle, b: Vehicle) =>
-      sortByType ? a.type.title.localeCompare(b.type.title) : 0,
+    (a: Vehicle, b: Vehicle) => {
+      if (selectedNation.length > 0) {
+        if (
+          selectedNation.includes(a.nation.icons.small) &&
+          selectedNation.includes(b.nation.icons.small)
+        ) {
+          return a.level - b.level
+        } else if (selectedNation.includes(a.nation.icons.small)) {
+          return -1
+        } else if (selectedNation.includes(b.nation.icons.small)) {
+          return 1
+        }
+      }
+      return 0
+    },
+    (a: Vehicle, b: Vehicle) => {
+      if (selectedType.length > 0) {
+        if (
+          selectedType.includes(a.type.icons.default) &&
+          selectedType.includes(b.type.icons.default)
+        ) {
+          return a.level - b.level
+        } else if (selectedType.includes(a.type.icons.default)) {
+          return -1
+        } else if (selectedType.includes(b.type.icons.default)) {
+          return 1
+        }
+      }
+      return 0
+    },
   ]
 
   function sortVehicles(vehicles: Vehicle[], compareShips: compareShipsType[]) {
@@ -77,10 +122,10 @@ function App() {
         <SortingPanel
           selectedLevels={selectedLevels}
           toggleLevelFilter={toggleLevelFilter}
-          sortByNation={sortByNation}
-          toggleSortByNation={toggleSortByNation}
-          sortByType={sortByType}
-          toggleSortByType={toggleSortByType}
+          selectedNation={selectedNation}
+          toggleNationFilter={toggleNationFilter}
+          selectedType={selectedType}
+          toggleTypeFilter={toggleTypeFilter}
         />
         <Cards slice={slice} />
         <button
